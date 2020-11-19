@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <mat-radio-group formControlName="league" class="radio-group">
+    <mat-radio-button
+      class="radio-button"
+      *ngFor="let league of leagues"
+      [value]="league.id"
+    >
+      {{ league.name }} {{ league.leagueCountry }}
+    </mat-radio-button>
+    <br />
+  </mat-radio-group>
+</form>
+
+<div>
+  <button (click)="onSubmit()" mat-raised-button>Sélectionner</button>
+  <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+  <br />
+</div>
+
+<button
+  *ngIf="isReadyForSimul"
+  (click)="onSimul()"
+  mat-raised-button
+  color="primary"
+>
+  Lancer la simulation
+</button>

@@ -1,0 +1,42 @@
+<form
+  [formGroup]="loginForm"
+  (submit)="onSubmit()"
+  class="form-container"
+  *ngIf="!isLoading"
+>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> E-mail </mat-label>
+    <input matInput formControlName="email" required />
+    <mat-error
+      *ngIf="
+        loginForm.controls.email.touched && loginForm.controls.email.invalid
+      "
+    >
+      <span *ngIf="loginForm.controls.email.errors.required"
+        >Ce champ est requis</span
+      >
+      <span *ngIf="loginForm.controls.email.errors.email"
+        >Ce champ n'est pas valide</span
+      >
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> Mot de passe </mat-label>
+    <input matInput formControlName="password" type="password" required />
+    <mat-error
+      *ngIf="
+        loginForm.controls.password.touched &&
+        loginForm.controls.password.invalid
+      "
+    >
+      <span *ngIf="loginForm.controls.password.errors.required"
+        >Ce champ est requis</span
+      >
+    </mat-error>
+  </mat-form-field>
+  <button type="submit" mat-raised-button>Login</button>
+</form>
+
+<div class="form-container">
+  <mat-spinner *ngIf="isLoading" diameter="80"></mat-spinner>
+</div>

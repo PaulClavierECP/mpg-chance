@@ -1,0 +1,113 @@
+@import 'colors.scss';
+
+// @debt SHAREABLE:2 "axelf: add in shared stylesheets"
+
+$font-family: 'Helvetica Neue', 'Helvetica Neue LT Std 65 Medium', Helvetica, sans-serif;
+
+$font-weight-normal: normal;
+$font-weight-condensed: 600;
+$font-weight-bold: bold;
+
+@mixin title-xxxxlarge {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-size: 60px;
+  line-height: 150%;
+}
+
+@mixin title-xxxlarge {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+@mixin title-xxlarge {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 130%;
+}
+
+.title-xxlarge {
+  @include title-xxlarge;
+}
+
+@mixin title-xlarge {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 150%;
+}
+
+.title-xlarge {
+  @include title-xlarge;
+}
+
+@mixin title-large {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 150%;
+}
+
+.title-large {
+  @include title-large;
+}
+
+@mixin title-small {
+  font-family: $font-family;
+  font-weight: $font-weight-condensed;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.title-small {
+  @include title-small;
+}
+
+@mixin title-modal {
+  @include title-xlarge;
+  padding-bottom: spacing(3);
+
+  @include isMobile {
+    @include title-large;
+  }
+}
+
+@mixin description {
+  font-family: $font-family;
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@mixin paragraph {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.paragraph {
+  @include paragraph;
+}
+
+@mixin text-small {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+body {
+  @include paragraph;
+  color: $primary;
+}

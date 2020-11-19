@@ -1,0 +1,42 @@
+// = Mixins ===
+
+// @debt SHAREABLE:2 "axelf: add in shared stylesheets"
+
+$mobile-breakpoint: 900px;
+
+@mixin isDesktop {
+  @media not screen, (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin isMobile {
+  @media only screen and (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin before {
+  &::before {
+    content: '';
+    display: block;
+
+    @content;
+  }
+}
+
+@mixin after {
+  &::after {
+    content: '';
+    display: block;
+
+    @content;
+  }
+}
+
+// = Function ===
+
+$base-spacing: 8px;
+@function spacing($n) {
+  @return $n * $base-spacing;
+}

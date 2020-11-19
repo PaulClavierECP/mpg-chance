@@ -1,0 +1,10 @@
+<div *ngIf="leagues">
+  <mat-tab-group>
+    <mat-tab label="Actives">
+      <app-leagues-form [leagues]="leaguesActive"></app-leagues-form>
+    </mat-tab>
+    <mat-tab label="Inactives">
+      <app-leagues-form [leagues]="leaguesInactive"></app-leagues-form>
+    </mat-tab>
+  </mat-tab-group>
+</div>
