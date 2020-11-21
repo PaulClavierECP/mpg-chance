@@ -3,12 +3,12 @@
 @import "./app/stylesheets/mixins.scss";
 @import "./app/stylesheets/typography.scss";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-html,
 body {
-  height: 100%;
-}
-body {
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
