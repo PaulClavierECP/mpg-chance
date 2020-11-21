@@ -43,8 +43,6 @@
 ></app-login-form>
 <br />
 <br />
-<div class="league-selection">
-  <app-user [user]="user$ | async"></app-user>
-  <app-leagues [leagues]="leagues$ | async"></app-leagues>
-  <app-table id="table" [table]="table$ | async"></app-table>
-</div>
+<app-user [user]="user$ | async"></app-user>
+<app-leagues [leagues]="leagues$ | async"></app-leagues>
+<app-table id="table" [table]="table$ | async"></app-table>
