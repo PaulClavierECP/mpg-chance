@@ -1,11 +1,10 @@
 @import "../app/stylesheets/styles.scss";
 
 .header {
+  width: 90%;
   margin-top: 32px;
-  margin-left: 64px;
-  margin-right: 200px;
-  margin-bottom: 64px;
   padding: 12px;
+  border-radius: 8px;
 }
 
 h2 {
@@ -25,29 +24,6 @@ p {
 app-login-form {
   padding: 12px;
   margin-top: 32px;
-  position: absolute;
-  top: 45%;
-  left: 33%;
   border-radius: 8px;
-}
-
-app-user {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-.leagues {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-app-table {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  background-color: #ffffff;
 }
